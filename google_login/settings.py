@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = "*"   #若要使用0.0.0.0 則需要將 ALLOWED_HOSTS = "*"
 
+LOGIN_REDIRECT_URL = '/logout'  # 登入後的首頁網址
+
+LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 
 # Application definition
 
@@ -39,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'loginIndex',
     'django.contrib.sites',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
